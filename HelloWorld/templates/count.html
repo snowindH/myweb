@@ -1,0 +1,19 @@
+{% block title %}The sequence{% endblock %}
+    <div>
+        <form action='/' method='post' enctype="multipart/form-data">{% csrf_token %}
+        <input type="file" name="pdb"><br>
+        <textarea rows='8' cols='80' name='seq_a'>{{seq_a|escape}}</textarea>
+        <br>
+        <input type='text' name='seq_c' value='{{seq_c|escape}}'>
+        <br/>
+        <input type="submit" value="submit">
+        </form>
+    </div>    
+{% block content %}
+{% if seq_a and seq_c %}
+<h2>您要统计序列中,{{seq_c|escape}}的结果为:</h2>
+序列中拥有需要统计的序列 "{{seq_c|escape}}"总共有{{seq_count|escape}}条<br>
+它们的位置分别为:{{seq_positions|escape}}<br>
+文件内容为:{{pdb|escape}}
+{% endif %}
+{% endblock %}

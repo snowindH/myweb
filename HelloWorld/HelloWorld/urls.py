@@ -16,7 +16,8 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 from django.conf.urls import url,include
+from tool.views import homepage,showpost,count_seq
 urlpatterns = [
-    url(r'^$',include('tool.urls')),
-    url(r'^admin/', admin.site.urls),
-]
+    url(r'^(\w+)$',showpost),
+    url(r'^$',count_seq),
+    url(r'^admin/', admin.site.urls),]

@@ -1,0 +1,43 @@
+<html>
+    <head id="page">
+        <title>home</title>
+        {% load staticfiles %}
+        <link href="../static/css/home.css" type="text/css" rel="stylesheet" />
+            <p id="logo"><a href="/" id="logo"><acronym title="back-to-home">CNTP</acronym></a>>><a href="" id="logo">Tool</a></p> 
+    </head>
+    <body>
+
+        <p>
+                    <img src= {% static "images/workflow_b.png" %} alt="The workflow of prediction" 
+                    width="672" height="379"/>
+        </p>
+        <div>
+        <form action="" method="POST" enctype="multipart/form-data">{% csrf_token %}
+            <p id="set_value">
+                Before upload your file for prediction, you should set:<br/> 
+                the <strong>"r"</strong>(given distance for computing)<br>
+                <i><acronym title="The distance of pairs used to filter pairs no need prediction.">r(A)</acronym></i>
+                <input type="r_value" size="2" maxlength="2" name="r" value="{{r|escape}}"><br><br>
+                the <strong>RMSD</strong>(the threshold value for structral similarity)<br>
+                <i><acronym title="The threshold value for structral similarity.">RMSD </acronym></i>
+                <input type="RMSD" side="5" maxlength="5" name="rmsd" value="{{rmsd|escape}}"/><br><br>
+                the <strong>"k"</strong>(the num of node about clique)<br>
+                <i><acronym title="The minimum of nodes in a clique.">k </acronym></i>
+                <input type="k" size="2" maxlength="3" name="k" value="{{k|escape}}" /><br>            
+                Upload your pdb file :
+                <input type="file" name="pdb" value="choosefile" /><br><br>
+                <!--input type="submit" src= {% static 'images/sub.png' %}  width="100 " height="100"/-->
+                <input type="submit" value= "Upload"><br>
+            
+        
+
+            {% if r and rmsd and k %}
+            The values that you set is :<br>r:{{r}}<br>rmsd:{{rmsd}}<br>k:{{k}}<br>
+            The name of pdbfile is :{{pdbname}}<br><hr>
+            <a href="res" ><bold><strong>Click here to see the results</strong</bold></a>
+        </p>
+        {% endif %}
+        </form>
+        </div>
+    </body>    
+</html>

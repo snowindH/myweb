@@ -1,0 +1,132 @@
+html{
+    text-align:center;
+    background-color:white;
+    widows: 300px;
+    height: 150px;
+
+    background-image: url("../images/back.jpg");
+    /*background-image:-moz-linear-gradient(rgb(77,132,214),#fff)*/
+    
+}
+body {
+
+    font-size:100%;
+    font-family:Arial, Helvetica, sans-serif;
+    letter-spacing: 0.15em;
+}
+#page {
+    max-width: 940px;
+    min-width: 720px;
+    margin:10px auto 10px auto;
+    padding:20px;
+    border:4px double#FFF;
+    }
+#logo{
+    color:black;
+    font-family: Impact;
+    font-size:30px;
+    text-align: left;
+    padding:2px;
+    background-color: rgb(96, 163, 226);    
+}
+h1 {
+    font-family: "Times New Roman";
+    font-size:30px;
+    color:black;
+    width:400px;
+    padding: 10px;
+    /*border: 3px solid #000;*/
+    margin: 50px auto 20px auto; 
+}
+#navigation {
+    width:1000px;
+    padding:15px;
+    margin:5px auto 5px auto;
+    border-top: 2px solid black;
+    border-bottom: 1px solid black;
+    text-align:center;
+
+ 
+}
+
+a{
+    color:black;
+    padding:6px 18px 5px 18px;
+    text-decoration: none;
+    display:inline;
+    margin:3px auto 3px auto;
+}
+ul>li {
+    display:inline;
+    margin:3px auto 3px auto;
+}
+
+#content , #set_value {
+    color:black;
+    line-height:2em;
+    width:700px;
+    text-align:left;
+    margin:40px auto 40px auto;
+}
+
+.box1 {
+    width:400px;
+    height:500 px;
+    padding:3px;
+    border:3px #000;
+    padding:5px;
+    margin:3px auto 5px auto;
+
+
+}
+.box2 {
+    width:400px;
+    height:100 px;
+    padding:3px;
+    border:3px #000;
+    padding:5px;
+    margin:3px auto 5px auto;
+
+}
+
+.fig1 img {
+
+    float:left;
+    margin: 10px;
+    width: 143px;
+    height: 137.6px;
+    border:1px solid #000
+}
+.fig2 img{
+    float:right;
+    display:block;
+    width: 155px;
+    height: 137px;
+    border:1px solid #000
+}
+.fig3 img{
+    float:left;
+    width: 135px;
+    height: 120px;
+    border:1px solid #000;
+    margin:3px auto 3px auto
+}
+.fig4 img{
+    text-align:right;
+    width: 341px;
+    height: 238px;
+    border:1px solid #000;
+    display:block;
+    margin:3px auto 3px auto
+}
+
+figure {
+    display:block;
+    margin:0px;
+    text-align: left;
+    display:block;
+}
+
+
+
+

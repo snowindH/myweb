@@ -1,0 +1,51 @@
+<!--home.html-->
+<html>
+    <head id="page">
+        <title>home</title>
+        {% load staticfiles %}
+        <link href="../static/css/home.css" type="text/css" rel="stylesheet" />
+            <p id="logo" class="logo"><a href="" id="logo">CNTP</a></p>
+            <h1 id="charge">Prediction of The Charge Transfer Network </h1>
+    </head>
+
+    <body>
+        <div>
+            <ul id="navigation">
+                <li><a href= "" class="on">Home</a></li>
+                <li><a href= "./tool.html" >Tool</a></li>
+                <li><a href="./contact.html">Contact US</a></li>
+            </ul>
+            <p id=content>
+             CTNP predict the charge transfer network by compute 
+             the RMSD of coordinate between the query
+             residues and the reference residues,
+             after that,find the important nodes,such as k-clique and community.
+             The output could be a network-graph,if you like or file that you can download.   
+            </p>
+        </div>
+
+        <div class="box1">
+            <div class="fig1">
+                <figure>
+                    <img src= {% static "images/Ave_0.01.png" %} />
+                </figure>
+            </div>
+            <div class="fig2">
+                <figure>
+                    <img src= {% static "images/HQD_0.002.png" %}  />
+                </figure>
+            </div>
+            <div class="fig4">
+                <figure>
+                    <img src= {% static "images/2wj4_clique.png" %} />
+                </figure>
+        </div>
+            <div class="fig3">
+                <figure>
+                    <img src= {% static "images/HQD_0.png" %} />
+                </figure>
+            </div>
+
+        </div>
+    </body>
+</html>

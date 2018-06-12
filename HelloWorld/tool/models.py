@@ -10,7 +10,9 @@ class Post(models.Model):
     slug = models.CharField(max_length=200)
     body = models.TextField()
     pub_date = models.DateTimeField(default=timezone.now)
-
+    k = models.CharField(max_length=64)
+    rmsd = models.CharField(max_length=64)
+    r = models.CharField(max_length=64)
     class Meta:
         ordering = ('-pub_date',)
     def __unicode__(self):
